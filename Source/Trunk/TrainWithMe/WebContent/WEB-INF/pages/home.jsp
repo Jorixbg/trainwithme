@@ -1,8 +1,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ include file="/WEB-INF/pages/header.jsp"%>
-<html>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
+
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="com.twm.lang.text"/>
+<html lang="${language}">
 <body>
-	<h1>Spring MVC Hello World Annotation Example</h1>
+        <form>
+            <select id="language" name="language" onchange="submit()">
+                <option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
+                <option value="fr" ${language == 'fr' ? 'selected' : ''}>Français</option>
+            </select>
+        </form>
+	<h1><fmt:message key="twm.title" /></h1>
 
 	<h2>${msg}</h2>
 	<h3>My name is ${name}</h3>
