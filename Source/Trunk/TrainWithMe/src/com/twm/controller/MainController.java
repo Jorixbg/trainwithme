@@ -12,7 +12,7 @@ public class MainController{
 	public ModelAndView helloWorld(){
  
 		ModelAndView model = new ModelAndView("home");
-		model.addObject("msg", "hello world");
+		model.addObject("msg", "WIP");
 		model.addObject("name", "George");
  
 		return model;
@@ -23,7 +23,7 @@ public class MainController{
 	public ModelAndView helloAbout(){
  
 		ModelAndView model = new ModelAndView("home");
-		model.addObject("msg", "hello world");
+		model.addObject("msg", "WIP");
 		model.addObject("name", "About");
  
 		return model;
