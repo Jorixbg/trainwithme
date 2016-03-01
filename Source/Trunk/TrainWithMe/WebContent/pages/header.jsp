@@ -5,9 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>TrainWithMe</title>
-	<link rel="stylesheet" type="text/css" href="WEB-INF/css/styles.css" />
-    <script src="WEB-INF/js/jquery-1.12.1.min"></script>
-    <script src="WEB-INF/js/bootstrap.js"></script>
+	<link href="<c:url value="/resources/css/styles.css" />" rel="stylesheet">
+    <script src="<c:url value="/resources/js/jquery-1.12.1.min.js" />"></script>
+    <script src="<c:url value="/resources/js/main.js" />"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
 </head>
 
