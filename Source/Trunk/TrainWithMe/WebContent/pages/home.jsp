@@ -13,7 +13,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4">
+			<div class="col-md-6 col-sm-6">
 				<form>
 					<select id="language" name="language" onchange="submit()">
 						<option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
@@ -21,7 +21,7 @@
 					</select>
 				</form>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-md-6 col-sm-6 text-right">
 				<fb:login-button scope="public_profile,email"
 					onlogin="checkLoginState();">
 				</fb:login-button>
@@ -34,11 +34,16 @@
 
 		<h2>${msg}</h2>
 		<h3>My name is ${name}</h3>
-		<div id="map" style="width: 400px; height: 400px"></div>
+		<div class="row">
+		
+			<div class="col-md-2 col-sm-2"></div>
+			<div id="map" class="col-md-8 col-sm-8" style="height:700px; !important"></div>
+			<div class="col-md-2 col-sm-2"></div>
+
+		</div>
 
 	</div>
 	<script>
-		$('.content').addClass('alert');
 		var mapCanvas = document.getElementById("map");
 		var mapOptions = {
 			center : new google.maps.LatLng(42.697429, 23.321541),
