@@ -9,13 +9,24 @@
 <fmt:setBundle basename="com.twm.lang.text" />
 <html lang="${language}">
 <body>
-	<form>
-		<select id="language" name="language" onchange="submit()">
-			<option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
-			<option value="fr" ${language == 'fr' ? 'selected' : ''}>Français</option>
-		</select>
-	</form>
-	<div class="content">
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<form>
+					<select id="language" name="language" onchange="submit()">
+						<option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
+						<option value="fr" ${language == 'fr' ? 'selected' : ''}>Français</option>
+					</select>
+				</form>
+			</div>
+			<div class="col-sm-4">
+				<fb:login-button scope="public_profile,email"
+					onlogin="checkLoginState();">
+				</fb:login-button>
+			</div>
+		</div>
 
 		<h1>
 			<fmt:message key="twm.title" />
