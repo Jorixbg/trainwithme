@@ -1,4 +1,4 @@
-package hello;
+package com.twm.eventengine.client;
 
 public class Greeting {
 
