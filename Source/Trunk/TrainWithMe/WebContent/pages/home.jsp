@@ -34,10 +34,18 @@
 
 		<h2>${msg}</h2>
 		<h3>My name is ${name}</h3>
+		<form role="form" action="name">
+			<div class="form-group">
+				<label for="name">Name:</label> <input type="name"
+					class="form-control" name="name" id="name">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
 		<div class="row">
-		
+
 			<div class="col-md-2 col-sm-2"></div>
-			<div id="map" class="col-md-8 col-sm-8" style="height:700px; !important"></div>
+			<div id="map" class="col-md-8 col-sm-8"
+				style="height: 700px; !important"></div>
 			<div class="col-md-2 col-sm-2"></div>
 
 		</div>
