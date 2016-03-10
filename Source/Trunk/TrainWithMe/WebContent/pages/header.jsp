@@ -5,12 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>TrainWithMe</title>
-<link href="<c:url value="/resources/css/styles.css" />"
-	rel="stylesheet">
+
 <script src="<c:url value="/resources/js/jquery-1.12.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/main.js" />"></script>
 <script src="<c:url value="/resources/js/facebook_api.js" />"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
 
 <!--  Bootstrap -->
 <!-- Latest compiled and minified CSS -->
@@ -30,8 +30,13 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 	crossorigin="anonymous"></script>
+	
+<!-- Custom styles -->
+<link href="<c:url value="/resources/css/styles.css" />"
+	rel="stylesheet">
 
 <script>
+
 $(document).ready(function() {
 	  $.ajaxSetup({ cache: true });
 	  $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
