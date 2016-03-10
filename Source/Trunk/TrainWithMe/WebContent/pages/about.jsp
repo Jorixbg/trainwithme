@@ -19,9 +19,9 @@
 						key="stepapp.title" /></a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="home"><fmt:message
-							key="stepapp.home" /></a></li>
-				<li><a href="about"><fmt:message key="stepapp.about" /></a></li>
+				<li><a href="home"><fmt:message key="stepapp.home" /></a></li>
+				<li class="active"><a href="about"><fmt:message
+							key="stepapp.about" /></a></li>
 			</ul>
 			<div class="text-right">
 				<form>
@@ -44,25 +44,11 @@
 				<h1>
 					<fmt:message key="stepapp.title" />
 				</h1>
-
-				<!-- <h2>${msg}</h2>
-				<h3>My name is ${name}</h3> -->
-				<form role="form" action="name">
-					<div class="form-group">
-						<label for="name"><fmt:message key="stepapp.search.event" /></label>
-						<input type="name" class="form-control" name="name" id="name">
-					</div>
-					<!-- <button type="submit" class="btn btn-default">Submit</button> -->
-				</form>
-				<button onclick="tempSubmit()" class="btn btn-default">Submit</button>
 			</div>
 		</div>
-		<div class="row">
+		<div class="content">
 
-			<div class="col-md-2 col-sm-2"></div>
-			<div id="map" class="col-md-8 col-sm-8"
-				style="height: 700px; !important"></div>
-			<div class="col-md-2 col-sm-2"></div>
+			<p>About</p>
 
 		</div>
 

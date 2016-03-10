@@ -12,7 +12,7 @@ import com.twm.clients.TestClientGet;
 @Controller
 public class MainController{
  
-	@RequestMapping("/welcome")
+	@RequestMapping("/home")
 //	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView helloWorld(){
  
@@ -27,7 +27,7 @@ public class MainController{
 //	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView helloAbout(){
  
-		ModelAndView model = new ModelAndView("home");
+		ModelAndView model = new ModelAndView("about");
 		model.addObject("msg", "WIP");
 		model.addObject("name", "About");
  
