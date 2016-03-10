@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>TrainWithMe</title>
+<title>StepApp</title>
 
 <script src="<c:url value="/resources/js/jquery-1.12.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/main.js" />"></script>
