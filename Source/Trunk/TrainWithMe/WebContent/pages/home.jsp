@@ -29,20 +29,21 @@
 	</div>
 	<div class="container-fluid" role="main">
 		<div class="jumbotron twm">
-			<div class="container text-center">
+			<div id="searchBar" class="container text-center">
 				<h1>
 					<fmt:message key="twm.title" />
 				</h1>
 
-				<h2>${msg}</h2>
-				<h3>My name is ${name}</h3>
+				<!-- <h2>${msg}</h2>
+				<h3>My name is ${name}</h3> -->
 				<form role="form" action="name">
 					<div class="form-group">
 						<label for="name"><fmt:message key="twm.search.event" /></label>
 						<input type="name" class="form-control" name="name" id="name">
 					</div>
-					<button type="submit" class="btn btn-default">Submit</button>
+					<!-- <button type="submit" class="btn btn-default">Submit</button> -->
 				</form>
+					<button onclick="tempSubmit()" class="btn btn-default">Submit</button>
 			</div>
 		</div>
 		<div class="row">

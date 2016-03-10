@@ -38,6 +38,7 @@ public class MainController{
 //	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView persistTest(HttpServletRequest request, 
 	        HttpServletResponse response){
+		
 		String name = request.getParameter("name");
 		TestClientGet.sendNameGet(name);
 		ModelAndView model = new ModelAndView("home");
