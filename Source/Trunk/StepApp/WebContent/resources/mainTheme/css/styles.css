@@ -1,0 +1,21 @@
+.content {
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+}
+
+.jumbotron.twm {
+	background: url('../images/bg.jpg') no-repeat center bottom fixed;
+	-webkit-background-size: cover; /* For WebKit*/
+	-moz-background-size: cover; /* Mozilla*/
+	-o-background-size: cover; /* Opera*/
+	background-size: cover; /* Generic*/
+}
+
+html, body {
+	background-color: #FFEECC;
+}
+
+.footer {
+	background-color: #DBC393;
+}

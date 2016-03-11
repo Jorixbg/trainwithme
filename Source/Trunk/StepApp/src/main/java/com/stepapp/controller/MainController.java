@@ -1,4 +1,4 @@
-package com.twm.controller;
+package com.stepapp.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -7,12 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.twm.clients.TestClientGet;
+import com.stepapp.clients.TestClientGet;
 
 @Controller
 public class MainController{
  
-	@RequestMapping({ "/", "/home" })
+	@RequestMapping("/home")
 //	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView helloWorld(){
  
