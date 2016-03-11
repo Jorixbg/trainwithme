@@ -10,22 +10,18 @@
 <html lang="${language}">
 <body>
 
-
-
 	<nav role="navigation" class="navbar navbar-default navbar-static-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="home"><fmt:message
-						key="stepapp.title" /></a>
+				<a class="navbar-brand" href="home">StepApp</a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li><a href="home"><fmt:message key="stepapp.home" /></a></li>
-				<li class="active"><a href="about"><fmt:message
-							key="stepapp.about" /></a></li>
+				<li class="active"><a href="home">Home</a></li>
+				<li><a href="about">About</a></li>
 			</ul>
 			<div class="text-right">
 				<form>
-					<select id="language" name="language" onchange="submit()">
+					<select class="selectpicker" id="language" name="language" onchange="submit()">
 						<option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
 						<option value="fr" ${language == 'fr' ? 'selected' : ''}>Français</option>
 					</select>
@@ -38,30 +34,6 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container-fluid" role="main">
-		<div class="jumbotron twm">
-			<div id="searchBar" class="container text-center">
-				<h1>
-					<fmt:message key="stepapp.title" />
-				</h1>
-			</div>
-		</div>
-		<div class="content">
-
-			<p><fmt:message key="stepapp.about.content" /></p>
-
-		</div>
-
-
-	</div>
-	<%@ include file="/pages/footer.jsp"%>
-	<script>
-		var mapCanvas = document.getElementById("map");
-		var mapOptions = {
-			center : new google.maps.LatLng(42.697429, 23.321541),
-			zoom : 10
-		}
-		var map = new google.maps.Map(mapCanvas, mapOptions);
-	</script>
+	
 </body>
 </html>

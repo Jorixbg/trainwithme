@@ -49,8 +49,7 @@
 				<h3>My name is ${name}</h3> -->
 				<form role="form" action="name">
 					<div class="form-group">
-						<label for="name"><fmt:message key="stepapp.search.event" /></label>
-						<input type="name" class="form-control" name="name" id="name">
+						<input type="name" class="form-control" name="name" id="name" placeholder="<fmt:message key="stepapp.search.event"/>">
 					</div>
 					<!-- <button type="submit" class="btn btn-default">Submit</button> -->
 				</form>
@@ -68,11 +67,7 @@
 
 
 	</div>
-	<div class="footer">
-		<div class="container-fluid">
-			<p>Footer placeholder</p>
-		</div>
-	</div>
+	<%@ include file="/pages/footer.jsp"%>
 	<script>
 		var mapCanvas = document.getElementById("map");
 		var mapOptions = {
