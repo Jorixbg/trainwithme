@@ -1,3 +1,3 @@
 function tempSubmit(){
-	$("#searchBar").html("Not yet implemented");
+	$("#searchBar").html("<b><h2>Not yet implemented</h2></b>");
 }

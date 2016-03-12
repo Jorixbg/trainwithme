@@ -47,8 +47,8 @@
 			</div>
 		</div>
 		<div class="content">
-
-			<p><fmt:message key="stepapp.about.content" /></p>
+			<div class="logo-center"><img class="logo-bg" src="<c:url value="/resources/images/logo_bg.jpg" />"></div>
+			<p class="content-paragraph"><h4><fmt:message key="stepapp.about.content" /></h4></p>
 
 		</div>
 

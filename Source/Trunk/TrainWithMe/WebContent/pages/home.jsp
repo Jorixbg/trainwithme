@@ -39,6 +39,10 @@
 		</div>
 	</nav>
 	<div class="container-fluid" role="main">
+	<!-- <div class="logo-center">
+		<img class="logo-bg" src="<c:url value="/resources/images/logo_bg.jpg" />">
+	</div> -->
+	<hr>
 		<div class="jumbotron twm">
 			<div id="searchBar" class="container text-center">
 				<h1>

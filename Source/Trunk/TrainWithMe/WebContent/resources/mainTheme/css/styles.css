@@ -23,3 +23,24 @@ html, body {
 input{
    text-align:center;
 }
+
+
+.logo-nav{
+    width:70px; /* you can use % */
+    height: auto;
+}
+
+.logo-center{
+	position: relative;
+    left: 50% !important;
+    margin-left: -140px !important;  /* 50% of your logo width */
+    padding-bottom: 50px !important;
+    display: block;
+}
+
+.logo-nav-center{
+	position: relative;
+    top: 0px;
+    left: 0px;
+    display: block;
+}
