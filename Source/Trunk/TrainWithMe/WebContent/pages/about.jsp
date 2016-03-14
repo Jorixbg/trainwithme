@@ -39,13 +39,13 @@
 		</div>
 	</nav>
 	<div class="container-fluid" role="main">
-		<div class="jumbotron twm">
+	<!-- <div class="jumbotron twm">
 			<div id="searchBar" class="container text-center">
 				<h1>
 					<fmt:message key="stepapp.title" />
 				</h1>
 			</div>
-		</div>
+		</div> -->
 		<div class="content">
 			<div class="logo-center"><img class="logo-bg" src="<c:url value="/resources/images/logo_bg.jpg" />"></div>
 			<p class="content-paragraph"><h4><fmt:message key="stepapp.about.content" /></h4></p>

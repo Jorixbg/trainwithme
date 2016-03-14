@@ -43,10 +43,10 @@
 		<img class="logo-bg" src="<c:url value="/resources/images/logo_bg.jpg" />">
 	</div> -->
 	<hr>
-		<div class="jumbotron twm">
+		<div id="searchPane" class="jumbotron twm">
 			<div id="searchBar" class="container text-center">
 				<h1>
-					<fmt:message key="stepapp.title" />
+					<img class="logo-jumbotron" src="<c:url value="/resources/images/logo_transp.png" />">
 				</h1>
 
 				<!-- <h2>${msg}</h2>
@@ -57,7 +57,7 @@
 					</div>
 					<!-- <button type="submit" class="btn btn-default">Submit</button> -->
 				</form>
-				<button onclick="tempSubmit()" class="btn btn-default">Submit</button>
+				<button onclick="tempSubmit('<fmt:message key="stepapp.under.construction" />')" class="btn btn-default">Submit</button>
 			</div>
 		</div>
 		<div class="row">

@@ -1,3 +1,4 @@
-function tempSubmit(){
-	$("#searchBar").html("<b><h2>Not yet implemented</h2></b>");
+function tempSubmit(message){
+	$("#searchPane").removeClass('twm');
+	$("#searchBar").html("<b><h2>"+message+"</h2></b>");
 }

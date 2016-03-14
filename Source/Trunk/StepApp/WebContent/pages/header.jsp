@@ -24,6 +24,18 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
 	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
 	crossorigin="anonymous">
+	
+	
+<!-- ICONS -->
+<link rel="apple-touch-icon" sizes="57x57" href="<c:url value="/resources/images/icons/apple-icon-57x57.png" />">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<c:url value="/resources/images/icons/favicon-32x32.png" />">
+<link rel="icon" type="image/png" sizes="96x96" href="<c:url value="/resources/images/icons/favicon-96x96.png" />">
+<link rel="icon" type="image/png" sizes="16x16" href="<c:url value="/resources/images/icons/favicon-16x16.png" />">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 <!-- Latest compiled and minified JavaScript -->
 <script
