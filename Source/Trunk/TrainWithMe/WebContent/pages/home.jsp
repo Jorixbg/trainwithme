@@ -46,7 +46,7 @@
 		<div id="searchPane" class="jumbotron twm">
 			<div id="searchBar" class="container text-center">
 				<h1>
-					<img class="logo-jumbotron" src="<c:url value="/resources/images/logo_transp.png" />">
+					<img class="logo-jumbotron" src="<c:url value="/resources/images/logo_transp_beta.png" />">
 				</h1>
 
 				<!-- <h2>${msg}</h2>
