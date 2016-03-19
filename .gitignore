@@ -3,6 +3,12 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 .settings/
+.metadata/
+.recommenders/
+Servers/
+Servers2/
+.classpath
+.project
 
 # Package Files #
 *.jar
@@ -13,4 +19,6 @@
 hs_err_pid*
 Source/Trunk/TrainWithMe/.settings/org.eclipse.core.resources.prefs
 *.prefs
+Source/Trunk/TrainWithMe/.classpath
+
 Source/Trunk/TrainWithMe/.classpath
