@@ -77,8 +77,9 @@ function testAPI() {
 					'/me',
 					function(response) {
 						console.log('Successful login for: ' + response.name);
-						document.getElementById('status').innerHTML = '<img src="//graph.facebook.com/'
-								+ response.id + '/picture"><br><a href="javascript:void(0)" onclick="fbLogout()">Logout</a>';
+						document.getElementById('status').innerHTML = '<a href="javascript:void(0)" onclick="fbLogout()">Logout</a>';
+						document.getElementById('profile').innerHTML = '<img id="profile-pic" src="//graph.facebook.com/'
+							+ response.id + '/picture"><p id="profile-greeting"> Hello, '+response.name+'</p>';
 					});
 }
 

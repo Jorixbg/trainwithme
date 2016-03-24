@@ -39,16 +39,43 @@
 		</div>
 	</nav>
 	<div class="container-fluid" role="main">
-	<!-- <div class="jumbotron twm">
+		<!-- <div class="jumbotron twm">
 			<div id="searchBar" class="container text-center">
 				<h1>
 					<fmt:message key="stepapp.title" />
 				</h1>
 			</div>
 		</div> -->
-		<div class="content">
-			<div class="logo-center"><img class="logo-bg" src="<c:url value="/resources/images/logo_bg.jpg" />"></div>
-			<p class="content-paragraph"><h4><fmt:message key="stepapp.about.content" /></h4></p>
+		<div class="content row">
+			<div class="col-md-2 col-sm-2">
+				<!-- Sidebar -->
+				<div id="sidebar-wrapper" class="sidebar">
+					<ul class="sidebar-nav">
+						<li class="sidebar-brand"><a href="#"> <fmt:message
+									key="stepapp.profile" />
+						</a></li>
+						<li>
+							<div id="profile">
+								<p>You are not logged in.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- /#sidebar-wrapper -->
+			</div>
+			<div class="col-md-8 col-sm-8">
+				<div class="logo-center">
+					<img class="logo-bg"
+						src="<c:url value="/resources/images/logo_bg.jpg" />">
+				</div>
+				<p class="content-paragraph">
+				<h4>
+					<fmt:message key="stepapp.about.content" />
+				</h4>
+				</p>
+			</div>
+			<div class="col-md-2 col-sm-2"></div>
+
 
 		</div>
 

@@ -30,39 +30,58 @@
 						<option value="fr" ${language == 'fr' ? 'selected' : ''}>Français</option>
 					</select>
 				</form>
-			</div>
-			<div id="status" class="text-right">
-				<fb:login-button scope="public_profile,email"
-					onlogin="checkLoginState();">
-				</fb:login-button>
+				<div id="status">
+					<fb:login-button scope="public_profile,email"
+						onlogin="checkLoginState();">
+					</fb:login-button>
+				</div>
 			</div>
 		</div>
 	</nav>
 	<div class="container-fluid" role="main">
-	<!-- <div class="logo-center">
+		<!-- <div class="logo-center">
 		<img class="logo-bg" src="<c:url value="/resources/images/logo_bg.jpg" />">
 	</div> -->
-	<hr>
+		<hr>
 		<div id="searchPane" class="jumbotron twm">
 			<div id="searchBar" class="container text-center">
 				<h1>
-					<img class="logo-jumbotron" src="<c:url value="/resources/images/logo_transp_beta.png" />">
+					<img class="logo-jumbotron"
+						src="<c:url value="/resources/images/logo_transp_beta.png" />">
 				</h1>
 
 				<!-- <h2>${msg}</h2>
 				<h3>My name is ${name}</h3> -->
 				<form role="form" action="name">
 					<div class="form-group">
-						<input type="name" class="form-control" name="name" id="name" placeholder="<fmt:message key="stepapp.search.event"/>">
+						<input type="name" class="form-control" name="name" id="name"
+							placeholder="<fmt:message key="stepapp.search.event"/>">
 					</div>
 					<!-- <button type="submit" class="btn btn-default">Submit</button> -->
 				</form>
-				<button onclick="tempSubmit('<fmt:message key="stepapp.under.construction" />')" class="btn btn-default">Submit</button>
+				<button
+					onclick="tempSubmit('<fmt:message key="stepapp.under.construction" />')"
+					class="btn btn-default">Submit</button>
 			</div>
 		</div>
-		<div class="row">
+		<div class="content row">
+			<div class="col-md-2 col-sm-2">
+				<!-- Sidebar -->
+				<div id="sidebar-wrapper" class="sidebar">
+					<ul class="sidebar-nav">
+						<li class="sidebar-brand"><a href="#"> <fmt:message
+									key="stepapp.profile" />
+						</a></li>
+						<li>
+							<div id="profile">
+								<p>You are not logged in.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- /#sidebar-wrapper -->
 
-			<div class="col-md-2 col-sm-2"></div>
+			</div>
 			<div id="map" class="col-md-8 col-sm-8"
 				style="height: 700px; !important"></div>
 			<div class="col-md-2 col-sm-2"></div>
@@ -72,49 +91,55 @@
 
 	</div>
 	<%@ include file="/pages/footer.jsp"%>
-	
+
 	<script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
+		// Note: This example requires that you consent to location sharing when
+		// prompted by your browser. If you see the error "The Geolocation service
+		// failed.", it means you probably did not give permission for the browser to
+		// locate you.
 
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 6
-        });
-        var infoWindow = new google.maps.InfoWindow({map: map});
+		function initMap() {
+			var map = new google.maps.Map(document.getElementById('map'), {
+				center : {
+					lat : -34.397,
+					lng : 150.644
+				},
+				zoom : 6
+			});
+			var infoWindow = new google.maps.InfoWindow({
+				map : map
+			});
 
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
+			// Try HTML5 geolocation.
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function(position) {
+					var pos = {
+						lat : position.coords.latitude,
+						lng : position.coords.longitude
+					};
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
+					infoWindow.setPosition(pos);
+					//infoWindow.setContent('Location found.');
+					map.setCenter(pos);
+				}, function() {
+					handleLocationError(true, infoWindow, map.getCenter());
+				});
+			} else {
+				// Browser doesn't support Geolocation
+				handleLocationError(false, infoWindow, map.getCenter());
+			}
+		}
 
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqgn89NanQzJ6Ftk-KjMoM13JZ16M-fxY&callback=initMap">
-    </script>
+		function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+			infoWindow.setPosition(pos);
+			infoWindow
+					.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.'
+							: 'Error: Your browser doesn\'t support geolocation.');
+		}
+	</script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqgn89NanQzJ6Ftk-KjMoM13JZ16M-fxY&callback=initMap">
+		
+	</script>
 </body>
 </html>
