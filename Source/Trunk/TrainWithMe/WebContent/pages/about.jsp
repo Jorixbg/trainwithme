@@ -31,7 +31,7 @@
 					</select>
 				</form>
 			</div>
-			<div class="text-right">
+			<div id="status" class="text-right">
 				<fb:login-button scope="public_profile,email"
 					onlogin="checkLoginState();">
 				</fb:login-button>
