@@ -54,9 +54,13 @@ input{
 	display: inherit;
 }
 
+.jumbotron.sidebar-stepapp {
+	padding-left:0px !important;
+	padding-top:0px !important;
+	background: #FBFBFB;
+}
 
-/* Toggle sidebar */
-
+/*
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -78,12 +82,12 @@ input{
     margin-left: -250px;
     overflow-y: auto;
     background: #FBFBFB;
-    /*
+    
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    */
+    
     border-radius: 7px;
 }
 
@@ -102,7 +106,7 @@ input{
     margin-right: -250px;
 }
 
-/* Sidebar Styles */
+
 
 .sidebar-nav {
     /*position: absolute;*/
@@ -150,7 +154,7 @@ input{
     background: none;
 }
 
-@media(min-width:7px) {
+@media(min-width:700px) {
     #wrapper {
         padding-left: 250px;
     }
@@ -177,4 +181,5 @@ input{
         margin-right: 0;
     }
 }
+    */
 

@@ -49,14 +49,14 @@
 		<div class="content row">
 			<div class="col-md-2 col-sm-2">
 				<!-- Sidebar -->
-				<div id="sidebar-wrapper" class="sidebar">
+				<div class="jumbotron sidebar-stepapp">
 					<ul class="sidebar-nav">
 						<li class="sidebar-brand"><a href="#"> <fmt:message
 									key="stepapp.profile" />
 						</a></li>
 						<li>
 							<div id="profile">
-								<p>You are not logged in.</p>
+								<p style="font-size: 14px !important;">You are not logged in.</p>
 							</div>
 						</li>
 					</ul>
