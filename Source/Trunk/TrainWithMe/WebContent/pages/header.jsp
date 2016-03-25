@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>StepApp</title>
-
+<meta name="description" content="StepApp is an application still in development stage, that will make the connection between trainers, people who want to train and free public spaces.">
 <script src="<c:url value="/resources/js/jquery-1.12.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/main.js" />"></script>
 <script src="<c:url value="/resources/js/facebook_api.js" />"></script>

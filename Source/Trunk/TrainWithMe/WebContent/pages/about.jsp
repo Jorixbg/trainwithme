@@ -15,11 +15,11 @@
 	<nav role="navigation" class="navbar navbar-default navbar-static-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="home"><fmt:message
+				<a class="navbar-brand" href="/"><fmt:message
 						key="stepapp.title" /></a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li><a href="home"><fmt:message key="stepapp.home" /></a></li>
+				<li><a href=""><fmt:message key="stepapp.home" /></a></li>
 				<li class="active"><a href="about"><fmt:message
 							key="stepapp.about" /></a></li>
 			</ul>
@@ -56,7 +56,7 @@
 						</a></li>
 						<li>
 							<div id="profile">
-								<p style="font-size: 14px !important;">You are not logged in.</p>
+								<p style="font-size: 14px !important;"><fmt:message key="not.logged.in" /></p>
 							</div>
 						</li>
 					</ul>
@@ -82,13 +82,5 @@
 
 	</div>
 	<%@ include file="/pages/footer.jsp"%>
-	<script>
-		var mapCanvas = document.getElementById("map");
-		var mapOptions = {
-			center : new google.maps.LatLng(42.697429, 23.321541),
-			zoom : 10
-		}
-		var map = new google.maps.Map(mapCanvas, mapOptions);
-	</script>
 </body>
 </html>

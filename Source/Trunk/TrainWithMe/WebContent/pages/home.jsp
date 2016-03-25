@@ -15,11 +15,11 @@
 	<nav role="navigation" class="navbar navbar-default navbar-static-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="home"><fmt:message
+				<a class="navbar-brand" href="/"><fmt:message
 						key="stepapp.title" /></a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="home"><fmt:message
+				<li class="active"><a href="/"><fmt:message
 							key="stepapp.home" /></a></li>
 				<li><a href="about"><fmt:message key="stepapp.about" /></a></li>
 			</ul>
@@ -73,7 +73,7 @@
 									key="stepapp.profile" />
 						</a></li>
 							<div id="profile">
-								<p style="font-size: 14px !important;">You are not logged in.</p>
+								<p style="font-size: 14px !important;"><fmt:message key="not.logged.in" /></p>
 							</div>
 					</ul>
 				</div>
