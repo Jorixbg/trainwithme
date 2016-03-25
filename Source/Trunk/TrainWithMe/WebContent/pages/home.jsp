@@ -116,14 +116,14 @@
 						lng : position.coords.longitude
 					};
 
-					infoWindow.setPosition(pos);
+					//infoWindow.setPosition(pos);
 					//infoWindow.setContent('Location found.');
 					map.setCenter(pos);
 				}, function() {
-					handleLocationError(true, infoWindow, map.getCenter());
+					//handleLocationError(true, infoWindow, map.getCenter());
 				});
 			} else {
-				// Browser doesn't support Geolocation
+				//Browser doesn't support Geolocation
 				handleLocationError(false, infoWindow, map.getCenter());
 			}
 		}

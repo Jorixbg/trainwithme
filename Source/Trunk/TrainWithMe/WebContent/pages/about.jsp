@@ -19,7 +19,7 @@
 						key="stepapp.title" /></a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li><a href=""><fmt:message key="stepapp.home" /></a></li>
+				<li><a href="/"><fmt:message key="stepapp.home" /></a></li>
 				<li class="active"><a href="about"><fmt:message
 							key="stepapp.about" /></a></li>
 			</ul>
