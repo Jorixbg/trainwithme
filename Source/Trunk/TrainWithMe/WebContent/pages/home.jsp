@@ -116,8 +116,8 @@
 						lng : position.coords.longitude
 					};
 
-					//infoWindow.setPosition(pos);
-					//infoWindow.setContent('Location found.');
+					infoWindow.setPosition(pos);
+					infoWindow.setContent('<a href="#">Create event</a>');
 					map.setCenter(pos);
 				}, function() {
 					//handleLocationError(true, infoWindow, map.getCenter());
