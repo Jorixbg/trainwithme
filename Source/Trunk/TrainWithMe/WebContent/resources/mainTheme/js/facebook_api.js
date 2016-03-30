@@ -8,6 +8,9 @@ function statusChangeCallback(response) {
 	// for FB.getLoginStatus().
 	if (response.status === 'connected') {
 		// Logged into your app and Facebook.
+		var uid = response.authResponse.userID;
+		var accessToken = response.authResponse.accessToken;
+		storeToken(accessToken);
 		testAPI();
 	} else if (response.status === 'not_authorized') {
 		// The person is logged into Facebook, but not your app.
@@ -79,7 +82,9 @@ function testAPI() {
 						console.log('Successful login for: ' + response.name);
 						document.getElementById('status').innerHTML = '<a href="javascript:void(0)" onclick="fbLogout()">Logout</a>';
 						document.getElementById('profile').innerHTML = '<img id="profile-pic" src="//graph.facebook.com/'
-							+ response.id + '/picture"><p id="profile-greeting"> Hello, '+response.name+'</p>';
+								+ response.id
+								+ '/picture"><p id="profile-greeting"> Hello, '
+								+ response.name + '</p>';
 					});
 }
 
@@ -87,5 +92,20 @@ function fbLogout() {
 	FB.logout(function(response) {
 		// user is now logged out
 		location.reload();
+	});
+}
+
+function storeToken(token) {
+	$.ajax({
+		url : "./fbauth",
+		async : true,
+		type : "GET",
+		timeout : 10000,
+		data : {
+			"token" : token,
+			"cache" : (Math.random() * 1000000)
+		}
+	}).fail(function(jqXHR, textStatus, m) {
+	}).done(function(data) {
 	});
 }
