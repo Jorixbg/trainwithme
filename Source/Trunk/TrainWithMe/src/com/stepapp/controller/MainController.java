@@ -1,4 +1,4 @@
-package com.twm.controller;
+package com.stepapp.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.twm.clients.TestClientGet;
+import com.stepapp.clients.TestClientGet;
 
 @Controller
 public class MainController {
@@ -22,8 +22,6 @@ public class MainController {
 	public ModelAndView helloWorld() {
 
 		ModelAndView model = new ModelAndView("home");
-		model.addObject("msg", "WIP");
-		model.addObject("name", "George");
 
 		return model;
 	}
@@ -33,7 +31,6 @@ public class MainController {
 	public ModelAndView helloAbout() {
 
 		ModelAndView model = new ModelAndView("about");
-		model.addObject("msg", "WIP");
 		model.addObject("name", "About");
 
 		return model;

@@ -6,7 +6,7 @@
 	scope="session" />
 
 <fmt:setLocale value="${language}" />
-<fmt:setBundle basename="com.twm.lang.text" />
+<fmt:setBundle basename="com.stepapp.lang.text" />
 <html lang="${language}">
 <body>
 
