@@ -72,9 +72,22 @@
 						<li class="sidebar-brand"><a href="#"> <fmt:message
 									key="stepapp.profile" />
 						</a></li>
-							<div id="profile">
-								<p style="font-size: 14px !important;"><fmt:message key="not.logged.in" /></p>
-							</div>
+						<div id="profile">
+							<c:choose>
+								<c:when test="${user != null}">
+									<p style="font-size: 14px !important;">
+										Welcome : ${user}
+									</p>
+										<a href="<c:url value="/logout" />"> Logout</a>
+								</c:when>
+								<c:otherwise>
+									<p style="font-size: 14px !important;">
+										<fmt:message key="not.logged.in" />
+										<a href="<c:url value="/login" />"> Login</a>
+									</p>
+								</c:otherwise>
+							</c:choose>
+						</div>
 					</ul>
 				</div>
 				<!-- /#sidebar-wrapper -->
@@ -91,11 +104,10 @@
 	<%@ include file="/pages/footer.jsp"%>
 
 	<script>
-	$( document ).ready(function() {
-	    
-	});
-	
-	
+		$(document).ready(function() {
+
+		});
+
 		// Note: This example requires that you consent to location sharing when
 		// prompted by your browser. If you see the error "The Geolocation service
 		// failed.", it means you probably did not give permission for the browser to

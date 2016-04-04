@@ -10,6 +10,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+	
+	@Autowired
+    CustomSuccessHandler customSuccessHandler;
 
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
@@ -24,7 +27,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	  http.authorizeRequests()
 		.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
 		.antMatchers("/dba/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_DBA')")
-		.and().formLogin();
+		.and().formLogin().loginPage("/login").successHandler(customSuccessHandler)
+        .usernameParameter("ssoId").passwordParameter("password")
+        .and().csrf()
+        .and().exceptionHandling().accessDeniedPage("/Access_Denied");
 		
 	}
 }
