@@ -1,8 +1,6 @@
-package SpringMvcInitializer;
+package com.stepapp.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
-import com.stepapp.config.AppConfig;
 
 public class SpringMvcInitializer 
        extends AbstractAnnotationConfigDispatcherServletInitializer {
