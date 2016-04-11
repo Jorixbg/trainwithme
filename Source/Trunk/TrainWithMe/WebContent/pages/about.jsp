@@ -48,20 +48,7 @@
 		</div> -->
 		<div class="content row">
 			<div class="col-md-2 col-sm-2">
-				<!-- Sidebar -->
-				<div class="jumbotron sidebar-stepapp">
-					<ul class="sidebar-nav">
-						<li class="sidebar-brand"><a href="#"> <fmt:message
-									key="stepapp.profile" />
-						</a></li>
-						<li>
-							<div id="profile">
-								<p style="font-size: 14px !important;"><fmt:message key="not.logged.in" /></p>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<!-- /#sidebar-wrapper -->
+				<%@ include file="/pages/sidebar.jsp"%>
 			</div>
 			<div class="col-md-8 col-sm-8">
 				<div class="logo-center">

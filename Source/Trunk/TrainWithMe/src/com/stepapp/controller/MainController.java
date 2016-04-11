@@ -17,10 +17,8 @@ import com.stepapp.clients.TestClientGet;
 
 @Controller
 public class MainController {
-	
-	
 
-	@RequestMapping(value={ "/", "/home" }, method={RequestMethod.POST,RequestMethod.GET})
+	@RequestMapping(value = { "/", "/home" }, method = { RequestMethod.POST, RequestMethod.GET })
 	public ModelAndView helloWorld(HttpServletRequest request, HttpServletResponse response) {
 
 		ModelAndView model = new ModelAndView("home");
@@ -29,7 +27,7 @@ public class MainController {
 		return model;
 	}
 
-	@RequestMapping(value="/about" , method={RequestMethod.POST,RequestMethod.GET})
+	@RequestMapping(value = "/about", method = { RequestMethod.POST, RequestMethod.GET })
 	// @RequestMapping(method = RequestMethod.GET)
 	public ModelAndView helloAbout() {
 
@@ -80,30 +78,29 @@ public class MainController {
 			request.getSession().setAttribute("fbToken", token);
 			// TODO store token
 		}
-		
+
 		ModelAndView model = new ModelAndView();
 		model.setViewName("home");
 		return model;
 	}
-	
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginPage() {
-        return "login";
-    }
- 
-    private String getPrincipal(){
-        String userName = null;
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
- 
-        if (principal instanceof UserDetails) {
-            userName = ((UserDetails)principal).getUsername();
-        } else {
-            userName = principal.toString();
-        }
-        if(userName.equals("anonymousUser")){
-        	return null;
-        }
-        return userName;
-    }
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String loginPage() {
+		return "login";
+	}
+
+	private String getPrincipal() {
+		String userName = null;
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+		if (principal instanceof UserDetails) {
+			userName = ((UserDetails) principal).getUsername();
+		} else {
+			userName = principal.toString();
+		}
+		if (userName.equals("anonymousUser")) {
+			return null;
+		}
+		return userName;
+	}
 }
