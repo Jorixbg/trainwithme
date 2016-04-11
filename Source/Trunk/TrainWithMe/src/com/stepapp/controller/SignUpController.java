@@ -21,10 +21,10 @@ import com.stepapp.service.UserService;
 
 @Controller
 public class SignUpController {
-	
+
 	@Autowired
 	UserService userService;
-	
+
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -38,17 +38,26 @@ public class SignUpController {
 		model.setViewName("signup");
 		return model;
 	}
-	
-	@RequestMapping(value = "/signupaction", method = { RequestMethod.GET, RequestMethod.POST })
+
+	@RequestMapping(value = "/registration", method = { RequestMethod.GET, RequestMethod.POST })
 	public ModelAndView signupActionPage(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView model = new ModelAndView();
 		if (!validateInputs(request)) {
 			model.addObject("signUpError", error);
 		}
-		createUser();
+		try {
+			createUser();
+		} catch (Exception e) {
+			e.printStackTrace();
+			error = "Some error occured. Please try again later.";
+			model.addObject("signUpError", error);
+			model.setViewName("signup");
+			return model;
+		}
+		model.addObject("success", true);
 		model.setViewName("signup");
 		return model;
-		
+
 	}
 
 	private void createUser() {
@@ -63,7 +72,7 @@ public class SignUpController {
 		userProfiles.add(userService.fetchProfile(UserProfileType.USER.getUserProfileType()));
 		user.setUserProfiles(userProfiles);
 		userService.createUser(user);
-		
+
 	}
 
 	private boolean validateInputs(HttpServletRequest req) {
@@ -72,12 +81,12 @@ public class SignUpController {
 		email = req.getParameter("email");
 		password = req.getParameter("password");
 		sid = req.getParameter("sid");
-		if(StringUtils.isBlank(firstName) || StringUtils.isBlank(lastName) ||
-				StringUtils.isBlank(email) || StringUtils.isBlank(password) || StringUtils.isBlank(sid)){
+		if (StringUtils.isBlank(firstName) || StringUtils.isBlank(lastName) || StringUtils.isBlank(email)
+				|| StringUtils.isBlank(password) || StringUtils.isBlank(sid)) {
 			error = "Missing input";
 			return false;
 		}
-		
+
 		return true;
 	}
 }

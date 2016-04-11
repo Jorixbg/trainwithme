@@ -1,5 +1,3 @@
-
-
 .jumbotron.twm {
 	background: url('../images/bg.jpg') no-repeat center bottom fixed;
 	-webkit-background-size: cover; /* For WebKit*/
@@ -16,29 +14,28 @@ html, body {
 	background-color: #DBC393;
 }
 
-input{
-   text-align:center;
+input {
+	text-align: center;
 }
 
-
-.logo-nav{
-    width:70px; /* you can use % */
-    height: auto;
+.logo-nav {
+	width: 70px; /* you can use % */
+	height: auto;
 }
 
-.logo-center{
+.logo-center {
 	position: relative;
-    left: 50% !important;
-    margin-left: -140px !important;  /* 50% of your logo width */
-    padding-bottom: 50px !important;
-    display: block;
+	left: 50% !important;
+	margin-left: -140px !important; /* 50% of your logo width */
+	padding-bottom: 50px !important;
+	display: block;
 }
 
-.logo-nav-center{
+.logo-nav-center {
 	position: relative;
-    top: 0px;
-    left: 0px;
-    display: block;
+	top: 0px;
+	left: 0px;
+	display: block;
 }
 
 /* Account */
@@ -55,9 +52,14 @@ input{
 }
 
 .jumbotron.sidebar-stepapp {
-	padding-left:0px !important;
-	padding-top:0px !important;
+	padding-left: 0px !important;
+	padding-top: 0px !important;
 	background: #FBFBFB;
+}
+
+#loginForm {
+	display: none;
+	width: 120%;
 }
 
 /*
@@ -110,76 +112,91 @@ input{
 
 .sidebar-nav {
     /*position: absolute;*/
-    top: 0;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+top
+:
+ 
+0;
+width
+:
+ 
+250
+px
+;
 
+    
+margin
+:
+ 
+0;
+padding
+:
+ 
+0;
+list-style
+:
+ 
+none
+;
+
+
+}
 .sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
+	text-indent: 20px;
+	line-height: 40px;
 }
 
 .sidebar-nav li a {
-    display: block;
-    text-decoration: none;
-    color: #999999;
+	display: block;
+	text-decoration: none;
+	color: #999999;
 }
 
 .sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
+	text-decoration: none;
+	color: #fff;
+	background: rgba(255, 255, 255, 0.2);
 }
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+	text-decoration: none;
 }
 
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
+.sidebar-nav>.sidebar-brand {
+	height: 65px;
+	font-size: 18px;
+	line-height: 60px;
 }
 
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
+.sidebar-nav>.sidebar-brand a {
+	color: #999999;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
+.sidebar-nav>.sidebar-brand a:hover {
+	color: #fff;
+	background: none;
 }
 
-@media(min-width:700px) {
-    #wrapper {
-        padding-left: 250px;
-    }
-
-    #wrapper.toggled {
-        padding-left: 0;
-    }
-
-    #sidebar-wrapper {
-        width: 250px;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-
-    #page-content-wrapper {
-        padding: 20px;
-        position: relative;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
+@media ( min-width :700px) {
+	#wrapper {
+		padding-left: 250px;
+	}
+	#wrapper.toggled {
+		padding-left: 0;
+	}
+	#sidebar-wrapper {
+		width: 250px;
+	}
+	#wrapper.toggled #sidebar-wrapper {
+		width: 0;
+	}
+	#page-content-wrapper {
+		padding: 20px;
+		position: relative;
+	}
+	#wrapper.toggled #page-content-wrapper {
+		position: relative;
+		margin-right: 0;
+	}
 }
-    */
-
+*
+/
