@@ -47,7 +47,7 @@
 			<div id="searchBar" class="container text-center">
 				<h1>
 					<img class="logo-jumbotron"
-						src="<c:url value="/resources/images/logo_transp_beta.png" />">
+						src="<c:url value="/resources/images/logo_transp_beta.png" />" style="padding-bottom: 10px;">
 				</h1>
 
 				<!-- <h2>${msg}</h2>
